@@ -18,33 +18,7 @@ import java.util.UUID;
 public class PersonController {
 
     @Autowired
-    private ReactivePersonRepository repository;
-
-    @Autowired
     private PersonRepository personRepository;
-
-    @RequestMapping(value = "/rperson", method = RequestMethod.GET)
-    public Flux<Person> getAllBosses() {
-        return this.repository.findAll();
-    }
-
-    @RequestMapping(value = "/rperson/{id}", method = RequestMethod.GET)
-    public Mono<Person> getBossById(@PathVariable("id") String id) {
-        return this.repository.findById(id);
-    }
-
-    @RequestMapping(value = "/rperson/starts/{prefix}", method = RequestMethod.GET)
-    public Flux<Person> getAllBossesStartsWith(@PathVariable("prefix") String prefix) {
-        return this.repository.findByLastNameStartsWith(prefix);
-    }
-
-    @RequestMapping(value = "/rperson", method = RequestMethod.POST)
-    public Mono<@Valid Person> createBoss(@Valid @RequestBody Person person) {
-        person.setId(UUID.randomUUID().toString());
-        return this.repository.save(person);
-    }
-
-
 
     @RequestMapping(value = "/person", method = RequestMethod.GET)
     public List<Person> getAllBosses2() {
