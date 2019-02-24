@@ -6,7 +6,7 @@ import scala.concurrent.duration.FiniteDuration
 
 class BlazeMeterGatlingTest extends Simulation {
 
-  val scn = scenario("AddAndFindPersons").repeat(1000, "n") {
+  val scn = scenario("AddAndFindPersons").repeat(1, "n") {
     exec(
       http("PersonStarts-API-Reactive")
         .get("http://localhost:12051/rperson/starts/H")
@@ -14,6 +14,6 @@ class BlazeMeterGatlingTest extends Simulation {
     )
   }
 
-  setUp(scn.inject(atOnceUsers(30))).maxDuration(FiniteDuration.apply(10, "minutes"))
+  setUp(scn.inject(atOnceUsers(1))).maxDuration(FiniteDuration.apply(10, "minutes"))
 
 }

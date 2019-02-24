@@ -2,8 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="balzemeter.gatling-performance.main" target="1.8" />
+      <module name="balzemeter.gatling-performance.test" target="1.8" />
       <module name="binkeleraible.gatling-performance.main" target="1.8" />
       <module name="binkeleraible.gatling-performance.test" target="1.8" />
+      <module name="gatling-.gatling-performance.main" target="1.8" />
+      <module name="gatling-.gatling-performance.test" target="1.8" />
       <module name="gatling-performance.main" target="1.8" />
       <module name="gatling-performance.test" target="1.8" />
     </bytecodeTargetLevel>
