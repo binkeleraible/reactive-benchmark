@@ -1,4 +1,4 @@
-package hello;
+package reactive.config;
 
 import com.mongodb.reactivestreams.client.MongoClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 public class ReactiveMongoConfig {
 
     @Autowired
-    MongoClient mongoClient;
+    private MongoClient mongoClient;
 
     @Bean
     public ReactiveMongoTemplate reactiveMongoTemplate() {
