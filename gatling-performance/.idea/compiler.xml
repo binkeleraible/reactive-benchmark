@@ -10,6 +10,8 @@
       <module name="gatling-.gatling-performance.test" target="1.8" />
       <module name="gatling-performance.main" target="1.8" />
       <module name="gatling-performance.test" target="1.8" />
+      <module name="gatling-person-api.gatling-performance.main" target="1.8" />
+      <module name="gatling-person-api.gatling-performance.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

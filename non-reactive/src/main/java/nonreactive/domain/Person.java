@@ -1,4 +1,4 @@
-package testsetup.domain;
+package nonreactive.domain;
 
 import org.springframework.data.annotation.Id;
 

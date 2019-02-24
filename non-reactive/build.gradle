@@ -1,3 +1,7 @@
+group 'person-api-non-reactive'
+version '1.0-SNAPSHOT'
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -26,7 +30,6 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-   // compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb")
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("org.springframework.boot:spring-boot-starter-test")

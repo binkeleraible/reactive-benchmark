@@ -1,3 +1,8 @@
+group 'person-api-reactive'
+version '1.0-SNAPSHOT'
+
+
+
 buildscript {
     repositories {
         mavenCentral()

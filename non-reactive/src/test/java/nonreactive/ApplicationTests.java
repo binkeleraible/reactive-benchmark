@@ -1,7 +1,6 @@
-package testsetup;
+package nonreactive;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import testsetup.domain.Person;
+import nonreactive.domain.Person;
 
 import java.util.stream.IntStream;
 
-import static testsetup.DatabasePopulationData.randomAppelation;
-import static testsetup.DatabasePopulationData.randomName;
+import static nonreactive.DatabasePopulationData.randomAppelation;
+import static nonreactive.DatabasePopulationData.randomName;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

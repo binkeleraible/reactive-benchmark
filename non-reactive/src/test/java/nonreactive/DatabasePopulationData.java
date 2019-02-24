@@ -1,4 +1,4 @@
-package testsetup;
+package nonreactive;
 
 import java.util.Arrays;
 import java.util.List;

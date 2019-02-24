@@ -1,9 +1,9 @@
 
-package testsetup.repository;
+package nonreactive.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
-import testsetup.domain.Person;
+import nonreactive.domain.Person;
 
 import java.util.List;
 
