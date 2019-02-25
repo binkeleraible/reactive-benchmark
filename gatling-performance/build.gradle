@@ -31,8 +31,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    testCompile group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '2.2.5'
-    testCompile group: 'io.gatling', name: 'gatling-jdbc', version: '2.2.5'
+    testCompile group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.0.3'
+    testCompile group: 'io.gatling', name: 'gatling-jdbc', version: '3.0.3'
 
 }
 
