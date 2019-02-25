@@ -21,8 +21,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-//@Ignore
-public class ApplicationTests {
+@Ignore
+public class Databasepopulator {
 
     @Autowired
     private MockMvc mockMvc;

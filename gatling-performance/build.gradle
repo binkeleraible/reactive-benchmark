@@ -36,6 +36,13 @@ dependencies {
 
 }
 
+task loadTestReactive(type: Exec) {
+    def env_vars = ['USERS': '30', 'DURATION': '10', 'TESTNAME': 'Reactive-Test', 'URL': 'http://localhost:12051/person/starts/j']
+    environment env_vars
+
+    commandLine 'gradle loadTest'
+}
+
 task loadTest(type: JavaExec) {
     dependsOn testClasses
     description = "Load Test With Gatling"
@@ -52,3 +59,5 @@ task loadTest(type: JavaExec) {
             "--bodies-folder", sourceSets.test.resources.srcDirs.toList().first().toString() + "/gatling/bodies",
     ]
 }
+
+loadTest.mustRunAfter loadTestReactive
