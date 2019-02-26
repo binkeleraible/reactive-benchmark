@@ -26,5 +26,11 @@ person records in to the database.
 - Then run gradle loadTest in the gatling-performance folder.
 
 To test the reactive wbeapps endpoint which returns all persons whose appelattino starts with a given prefix you set  
- ['USERS': '30', 'DURATION': '10', 'TESTNAME': 'Reactive-Test', 'URL': 'http://localhost:12051/person/starts/j'].  
- Then run gradle loadTest.
+ ['USERS': '30', 'DURATION': '10', 'TESTNAME': 'Reactive-Test-Get', 'URL': 'http://localhost:12051/person/starts/j'].  
+ Then run gradle loadTestGet.
+
+To test the reactive wbeapps endpoint which creates random persons  
+ ['USERS': '30', 'DURATION': '10', 'TESTNAME': 'Reactive-Test-Post', 'URL': 'http://localhost:12051/person/starts/j'].  
+ Then run gradle loadTestPost.
+ 
+ 
