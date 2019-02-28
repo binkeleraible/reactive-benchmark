@@ -6,13 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import reactive.repository.ReactivePersonRepository;
 import reactive.domain.Person;
+import reactive.repository.ReactivePersonRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import javax.validation.Valid;
-import java.util.UUID;
 
 @RestController
 public class PersonController {
@@ -37,7 +34,7 @@ public class PersonController {
 
     @RequestMapping(value = "/person", method = RequestMethod.POST)
     public Mono<Person> createPerson(@RequestBody Person person) {
-        person.setId(UUID.randomUUID().toString());
+        //person.setId(UUID.randomUUID().toString());
         return this.repository.save(person);
     }
 

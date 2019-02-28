@@ -37,7 +37,7 @@ class GatlingPostTest extends Simulation {
   val name: String = System.getenv("TESTNAME")
   val requests: Int = System.getenv("REQUESTS").toInt
 
-  val scn: ScenarioBuilder = scenario("FindPersonsByAppelation")
+  val scn: ScenarioBuilder = scenario("CreatePersonsWithAppelation")
     .repeat(requests, "n") {
       exec(
         http(name)
@@ -64,6 +64,8 @@ class GatlingPostTest extends Simulation {
   }
 
   def randomBody(): String = {
-    """{"appelation":"$1","name":"$2"}""".replace("$1", randomAppelation()).replace("$2", randomName())
+    """{"appelation":"$1","name":"$2"}"""
+      .replace("$1", randomAppelation())
+      .replace("$2", randomName())
   }
 }

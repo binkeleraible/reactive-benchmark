@@ -43,7 +43,7 @@ public class PersonController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Person createPerson(@RequestBody Person person) {
-        person.setId(UUID.randomUUID().toString());
+      //  person.setId(UUID.randomUUID().toString());
         return this.personRepository.save(person);
     }
 }
